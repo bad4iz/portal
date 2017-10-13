@@ -1,0 +1,14 @@
+{
+    "name": "bad4iz/portal",
+    "description": "каркас для будущего портала",
+    "authors": [
+        {
+            "name": "bad4iz",
+            "email": "bad4iz@gmail.com"
+        }
+    ],
+    "require": {
+        "kint-php/kint": "^2.2",
+        "twig/twig": "~2.0"
+    }
+}
