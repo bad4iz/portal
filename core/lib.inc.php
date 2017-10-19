@@ -29,6 +29,12 @@ function requireFile($path) {
 
 /**
  * функция обработки ошибок
+ *
+ * проброс собственной ошибки
+ * if(что то) {
+ *  trigger_error("проблема с ..... ", E_USER_ERROR);
+ * }
+ *
  * @param $errNum номер ошибки
  * @param $errMsg текст ошибки
  * @param $errFile файл
@@ -69,7 +75,7 @@ function mError($errNum, $errMsg, $errFile, $errLine) {
       break;
   }
 
-  echo $str;
+   $GLOBALS['ERRORS'] = $str;
 
   error_log("$log \n", 3, $path);
   return true;
