@@ -3,6 +3,9 @@
  * библиотека функций
  */
 
+// регистрация автозагрузчика
+spl_autoload_register('mAutoLoad');
+
 // автозагрузка классов
 function mAutoLoad($className) {
   $className = str_replace('\\', '/', $className);
@@ -13,10 +16,10 @@ function mAutoLoad($className) {
   }
   switch ($package){
     case 'core':
-      requireFile('../core/' . $className . '.php');
+      requireFile(dirname(__DIR__). '/core/'  . $className . '.php');
       break;
     default:
-      requireFile('/project/' . $package . '/'  . $className . '.php');
+      requireFile(dirname(__DIR__).'/project/' . $package . '/'  . $className . '.php');
   }
 }
 
@@ -74,3 +77,7 @@ function mError($errNum, $errMsg, $errFile, $errLine) {
   error_log("$log \n", 3, $path);
   return true;
 }
+
+
+// /home/bad4iz/www/portal@2/project/uploadfile/controller/UploadFileController.php
+//                           project/uploadFile/controller/UploadFileController.php
