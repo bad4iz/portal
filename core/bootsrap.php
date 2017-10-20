@@ -12,4 +12,4 @@ spl_autoload_register('mAutoLoad');
 set_error_handler('mError');
 
 // подключение вендора
-require_once '../vendor/autoload.php';
+require_once '../../vendor/autoload.php';
