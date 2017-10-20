@@ -7,9 +7,3 @@ if(ass) {
 }
 
 
-function ass(){
-  kj();werwer;
-}
-
-?>
-bjhjkgjhj
