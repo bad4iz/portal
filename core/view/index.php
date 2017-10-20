@@ -1,7 +1,4 @@
 <?php
-/**
- *
- */
 
 require_once '../bootsrap.php';
 
@@ -16,4 +13,5 @@ $app->get('/hello/{name}', function (Request $request, Response $response) {
 
   return $response;
 });
+
 $app->run();
