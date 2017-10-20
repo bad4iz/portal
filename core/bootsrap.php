@@ -4,7 +4,7 @@
  */
 
 // подключение библиотеки
-require_once './lib.inc.php';
+require_once '../../lib.inc.php';
 
 // регистрация автолоудера
 spl_autoload_register('mAutoLoad');
