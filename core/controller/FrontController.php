@@ -6,7 +6,9 @@
  * Time: 18:58
  */
 
-namespace MyClass\controller;
+namespace Core\controller;
+
+use Core\rout\FactoryRouter;
 
 /**
  * Главный Контроллер
@@ -47,7 +49,7 @@ class FrontController {
 
     if($this->fileExist()) {
       $rc = new \ReflectionClass($this->getRouter());
-      if($rc->implementsInterface('\MyClass\rout\IRouter')) {
+      if($rc->implementsInterface('\Core\rout\IRouter')) {
         if($rc->hasMethod($this->getAction())) {
           $router = $rc->newInstance();
           $method = $rc->getMethod($this->getAction());
@@ -76,7 +78,10 @@ class FrontController {
    * @return string
    */
   private function getRouter() {
-    return '\MyClass\rout\\' . $this->_router;
+    $factory = new FactoryRouter();
+    d($this->_router);
+    return $factory->getRouter($this->_router);
+
   }
 
   /**

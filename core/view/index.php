@@ -1,9 +1,11 @@
 <?php
 
-use MyClass\controller\FrontController;
+
+use Core\controller\FrontController;
 use Slim\App;
 
-require 'vendor/autoload.php';
+include_once dirname(__FILE__) . "/../../vendor/autoload.php";
+
 
 // Create and configure Slim app
 $config = ['settings' => [
