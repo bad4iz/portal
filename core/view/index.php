@@ -1,47 +1,20 @@
 <?php
 
-// начальная загрузка
-require_once dirname(__FILE__) . '/../bootsrap.php';
+use MyClass\controller\FrontController;
+use Slim\App;
 
-use core\model\DbCoreNotOrm;
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
-use UploadFile\controller\UploadFileController;
+require 'vendor/autoload.php';
 
-$app = new \Slim\App;
+// Create and configure Slim app
+$config = ['settings' => [
+  'addContentLengthHeader' => false,
+]];
 
-$coreDbModel = DbCoreNotOrm::getInstance();
+$app = new App($config);
 
-//$db->user()->insert(['name'=>'вася']);
+/* Инициализация и запуск FrontController */
+$front = FrontController::getInstance();
+$front->routeInitialize($app);
 
-$res = '';
-foreach ($coreDbModel->db->application() as $application) {
-  $res .= $application->author["name"] . ": $application[title]  <br>";
-}
-
-// регистрация роутов
-$app->post('/', function (Request $request, Response $response) use ($res) {
-  $response->getBody()->write("Hello, $res");
-  return $response;
-});
-
-$app->get('/hello/{name}', function (Request $request, Response $response) use ($res) {
-  $name = $request->getAttribute('name');
-  $response->getBody()->write("Hello, $res");
-
-  return $response;
-});
-
-
-$app->post('/upload', function (Request $request, Response $response) {
-  $files = $request->getUploadedFiles()['userfile'];
-d($files);
-    $uploadFileController = new UploadFileController();
-  $uploadFileController->setFile($files);
-
-  return $response;
-});
-
-
-
+// Run app
 $app->run();
