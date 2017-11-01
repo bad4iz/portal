@@ -11,17 +11,17 @@ namespace Core\rout\customer;
 
 use Core\rout\Router;
 
-class TestProject extends Router {
+class TestProjectRouter extends Router {
 
-  function registerRouter() {
+
     /**
      * @param $app
      * @return bool
      */
     function registerRouter() {
-      $this->app->get('/testproject/{name}', function ($request, $response, $args) {
+      $this->app->get('/testProject/{name}', function ($request, $response, $args) {
         return $response->write("Hello " . $args['name']);
-      })->setName("ticket-detail");
+      });
     }
-  }
+
 }

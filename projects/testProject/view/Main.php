@@ -10,5 +10,7 @@ namespace TestProject\view;
 
 
 class Main {
+  function view($par){
 
+  }
 }
