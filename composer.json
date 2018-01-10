@@ -9,6 +9,15 @@
     ],
     "require": {
         "kint-php/kint": "^2.2",
-        "twig/twig": "~2.0"
+        "twig/twig": "~2.0",
+        "slim/slim": "^3.0",
+        "slim/twig-view": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "core\\": "core",
+            "testProject\\": "projects/testProject"
+
+        }
     }
 }
