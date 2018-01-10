@@ -10,6 +10,7 @@ namespace Core\rout\customer;
 
 
 use Core\rout\Router;
+use TestProject\Controller\HomeController;
 
 class TestRouter extends Router {
 
@@ -18,8 +19,6 @@ class TestRouter extends Router {
    * @return bool
    */
   function registerRouter() {
-    $this->app->get('/test/{name}', function ($request, $response, $args) {
-      return $response->write("Hello " . $args['name']);
-    })->setName("ticket-detail");
+    $this->app->get('/test/{name}', HomeController::class . ':home');
   }
 }
