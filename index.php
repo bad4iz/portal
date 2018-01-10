@@ -1,7 +1,7 @@
 <?php
 
 
-use Core\controller\FrontController;
+use core\controller\FrontController;
 use Slim\App;
 
 include_once "vendor/autoload.php";

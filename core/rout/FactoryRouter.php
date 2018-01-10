@@ -6,16 +6,16 @@
  * Time: 13:50
  */
 
-namespace Core\rout;
+namespace core\rout;
 
 
 class FactoryRouter {
   function getRouter($router){
     switch ($router){
-      case 'IndexRouter': return 'Core\rout\\' . $router;
-      case 'HelloRouter': return 'Core\rout\\' . $router;
+      case 'IndexRouter': return 'core\rout\\' . $router;
+      case 'HelloRouter': return 'core\rout\\' . $router;
       default:
-        return 'Core\rout\customer\\' . $router;
+        return 'core\rout\customer\\' . $router;
     }
   }
 }

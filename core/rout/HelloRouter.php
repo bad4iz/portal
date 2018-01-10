@@ -6,7 +6,7 @@
  * Time: 16:07
  */
 
-namespace Core\rout;
+namespace core\rout;
 
 class HelloRouter extends Router {
 

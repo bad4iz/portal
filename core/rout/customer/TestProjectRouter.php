@@ -6,10 +6,10 @@
  * Time: 14:26
  */
 
-namespace Core\rout\customer;
+namespace core\rout\customer;
 
 
-use Core\rout\Router;
+use core\rout\Router;
 
 class TestProjectRouter extends Router {
 

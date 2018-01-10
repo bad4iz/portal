@@ -6,10 +6,10 @@
  * Time: 18:47
  */
 
-namespace Core\rout;
+namespace core\rout;
 
 
-use Core\controller\FrontController;
+use core\controller\FrontController;
 
 abstract class Router implements IRouter {
   protected $app;

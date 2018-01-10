@@ -6,7 +6,7 @@
  * Time: 14:02
  */
 
-namespace Core\rout;
+namespace core\rout;
 
 /**
  * Interface IRouter

@@ -8,7 +8,7 @@
 
 namespace Core\controller;
 
-use Core\rout\FactoryRouter;
+use core\rout\FactoryRouter;
 
 /**
  * Главный Контроллер
