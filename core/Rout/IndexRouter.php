@@ -6,7 +6,7 @@
  * Time: 14:07
  */
 
-namespace core\rout;
+namespace core\Rout;
 
 
 class IndexRouter extends Router {

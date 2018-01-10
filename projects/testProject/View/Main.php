@@ -6,7 +6,7 @@
  * Time: 14:58
  */
 
-namespace testProject\view;
+namespace testProject\View;
 
 
 class Main {

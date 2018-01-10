@@ -6,11 +6,11 @@
  * Time: 9:14
  */
 
-namespace testProject\controller;
+namespace testProject\Controller;
 
 
 
-use core\controller\Render;
+use core\Controller\Render;
 
 class HomeController
 {
@@ -20,6 +20,6 @@ class HomeController
         // your code here
         // use $this->view to render the HTML
         $render = new Render();
-        return $response->write($render->render(__DIR__. '/../view/index.html') );
+        return $response->write($render->render(__DIR__ . '/../View/index.html') );
     }
 }

@@ -6,9 +6,9 @@
  * Time: 18:58
  */
 
-namespace Core\controller;
+namespace core\Controller;
 
-use core\rout\FactoryRouter;
+use core\Rout\FactoryRouter;
 
 /**
  * Главный Контроллер
