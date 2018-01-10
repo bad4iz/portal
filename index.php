@@ -17,6 +17,11 @@ $app = new App($config);
 // Fetch DI Container
 $container = $app->getContainer();
 
+$container['db'] = function ($container) {
+    $capsule =  new NotORM(new PDO("mysql:dbname=strip_counter;host=localhost", 'root', ''));
+    return $capsule;
+};
+
 // Register Twig View helper
 $container['view'] = function ($container) {
 
@@ -29,7 +34,6 @@ $container['view'] = function ($container) {
 
   $view->addExtension(new \Slim\Views\TwigExtension($container['router'], $basePath));
   return $view;
-
 };
 
 
