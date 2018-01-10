@@ -10,7 +10,7 @@ namespace Core\rout\customer;
 
 
 use Core\rout\Router;
-use TestProject\Controller\HomeController;
+use TestProject\controller\HomeController;
 
 class TestRouter extends Router {
 

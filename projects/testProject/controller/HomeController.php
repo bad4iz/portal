@@ -6,10 +6,11 @@
  * Time: 9:14
  */
 
-namespace TestProject\Controller;
+namespace TestProject\controller;
 
 
-use Core\Controller\Render;
+
+use Core\controller\Render;
 
 class HomeController
 {
